@@ -120,8 +120,9 @@ public class Chicken {
 	}
 	
 	public void drawEye() {
+		this.g2d.setColor(Color.white);
+		this.g2d.fillOval(x+81,y-100,8,8);
 		this.g2d.setColor(Color.black);
-		this.g2d.drawOval(x+81,y-100,8,8);
 		this.g2d.fillOval(x+84,y-98,4,4);
 	}
 	
@@ -211,42 +212,42 @@ public class Chicken {
 	}
 	
 	public void draw() {
-		this.g2d.setColor(Color.yellow);
+		this.g2d.setColor(new Color(253,106,50));
 		this.g2d.fill(legR);
 		this.g2d.setColor(Color.black);
 		this.g2d.draw(legR);
 		
-		this.g2d.setColor(Color.yellow);
+		this.g2d.setColor(new Color(253,106,50));
 		this.g2d.fill(legRUp);
 		this.g2d.setColor(Color.black);
 		this.g2d.draw(legRUp);
 		
-		this.g2d.setColor(Color.yellow);
+		this.g2d.setColor(new Color(253,106,50));
 		this.g2d.fill(legL);
 		this.g2d.setColor(Color.black);
 		this.g2d.draw(legL);
 		
-		this.g2d.setColor(Color.white);
+		this.g2d.setColor(new Color(255,216,46));
 		this.g2d.fill(wingL);
 		this.g2d.setColor(Color.black);
 		this.g2d.draw(wingL);
 		
-		this.g2d.setColor(Color.white);
+		this.g2d.setColor(new Color(255,216,46));
 		this.g2d.fill(bodyF);
 		this.g2d.setColor(Color.black);
 		this.g2d.draw(bodyF);
 		
-		this.g2d.setColor(Color.white);
+		this.g2d.setColor(new Color(255,216,46));
 		this.g2d.fill(bodyL);
 		this.g2d.setColor(Color.black);
 		this.g2d.draw(bodyL);
 		
-		this.g2d.setColor(Color.white);
+		this.g2d.setColor(new Color(255,216,46));
 		this.g2d.fill(body);
 		this.g2d.setColor(Color.black);
 		this.g2d.draw(body);
 		
-		this.g2d.setColor(Color.white);
+		this.g2d.setColor(new Color(255,216,46));
 		this.g2d.fill(wingR);
 		this.g2d.setColor(Color.black);
 		this.g2d.draw(wingR);
