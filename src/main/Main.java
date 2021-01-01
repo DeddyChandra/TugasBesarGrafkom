@@ -55,7 +55,7 @@ public class Main extends JPanel implements ActionListener, KeyListener{
 	
 	
 	public Main() {
-		totalY = 39;
+		totalY = 55;
 		addKeyListener(this);
 		try {
 			File f = new File("src/map.txt");
@@ -103,6 +103,7 @@ public class Main extends JPanel implements ActionListener, KeyListener{
 			if(chickenY == 1) {
 				positionDraw = positionDraw - 6; 
 				rechangeChickenPos = true;
+				this.chickenY = 0;
 			}
 		}
 //		System.out.println("asdasd chickenY = " + chickenY + " " + chickenX + " " + positionDraw);
@@ -273,17 +274,19 @@ public class Main extends JPanel implements ActionListener, KeyListener{
 			moveChicken(chickenX-1,chickenY+positionDraw-8);
 			map[chickenY+positionDraw-8][chickenX] = 'A';
 		}
-//		repaint();
-//		System.out.println(chickenX+" " +chickenY +  " " + map[chickenY][chickenX]);
+//		repainz.out.println(chickenX+" " +chickenY +  " " + map[chickenY][chickenX]);
 	}
 
 	public boolean chickenHittedTrain(int x, int y) {
+		
 		if(y == chickenY * SIZE) {
 			if(x == chickenX * SIZE) {
+				System.out.println("hitted by train");
 				stop = true;
 				return true;
 			}
 			else if(x >= chickenX * SIZE && x-900 <= chickenX * SIZE){
+				System.out.println("hitted by train");
 				stop = true;
 				return true;
 			}
@@ -292,12 +295,15 @@ public class Main extends JPanel implements ActionListener, KeyListener{
 	}
 	
 	public boolean chickenHittedRightCar(int x, int y) {
+		
 		if(y == chickenY * SIZE) {
 			if(x == chickenX * SIZE) {
+				System.out.println("hitted by right car");
 				stop = true;
 				return true;
 			}
 			else if(x >= chickenX * SIZE && x-200 <= chickenX * SIZE) {
+				System.out.println("hitted by right car");
 				stop = true;
 				return true;
 			}
@@ -307,12 +313,15 @@ public class Main extends JPanel implements ActionListener, KeyListener{
 	
 	
 	public boolean chickenHittedLeftCar(int x, int y) {
+
 		if(y == chickenY * SIZE) {
 			if(x == chickenX * SIZE) {
+				System.out.println("hitted by left car");
 				stop = true;
 				return true;
 			}
 			else if(x <= chickenX * SIZE && x+200 >= chickenX * SIZE) {
+				System.out.println("hitted by left car");
 				stop = true;
 				return true;
 			}
