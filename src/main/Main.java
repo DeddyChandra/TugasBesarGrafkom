@@ -9,7 +9,6 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.io.File;
-import java.util.Calendar;
 import java.util.Scanner;
 
 import javax.swing.JFrame;
@@ -55,7 +54,7 @@ public class Main extends JPanel implements ActionListener, KeyListener{
 	
 	
 	public Main() {
-		totalY = 55;
+		totalY = 74;
 		addKeyListener(this);
 		try {
 			File f = new File("src/map.txt");
@@ -103,7 +102,7 @@ public class Main extends JPanel implements ActionListener, KeyListener{
 			if(chickenY == 1) {
 				positionDraw = positionDraw - 6; 
 				rechangeChickenPos = true;
-				this.chickenY = 0;
+				this.chickenY = -1;
 			}
 		}
 //		System.out.println("asdasd chickenY = " + chickenY + " " + chickenX + " " + positionDraw);
